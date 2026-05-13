@@ -48,7 +48,7 @@ void	ScalarConverter::convert(const std::string& literal)
 		return ;
 	}
 
-	// 1 caracter
+	// check: 1 caracter
 	if (literal.length() == 1 && !std::isdigit(static_cast<unsigned char>(literal[0])))
 	{
 		unsigned char	c = literal[0];
@@ -60,10 +60,19 @@ void	ScalarConverter::convert(const std::string& literal)
 		return ;
 	}
 
-	double	d = std::atof(literal.c_str());
+	// check: numbers + caracters
+	char	*end;
+	double	mix = std::strtod(literal.c_str(), &end);
+	if (*end != '\0')
+	{
+		std::cout << "char: impossible" << std::endl;
+		std::cout << "int: impossible" << std::endl;
+		std::cout << "float: nanf" << std::endl;
+		std::cout << "double: nan" << std::endl;
+		return ;
+	}
 
-    char*   end = 
-    double  mix = std::strtod(d, &)
+	double	d = std::atof(literal.c_str());
 
 	// char
 	if (d < 0 || d > 127)
