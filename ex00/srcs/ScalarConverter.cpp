@@ -62,6 +62,9 @@ void	ScalarConverter::convert(const std::string& literal)
 
 	double	d = std::atof(literal.c_str());
 
+    char*   end = 
+    double  mix = std::strtod(d, &)
+
 	// char
 	if (d < 0 || d > 127)
 		std::cout << "char: impossible" << std::endl;
