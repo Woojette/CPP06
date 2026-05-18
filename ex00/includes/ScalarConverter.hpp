@@ -3,19 +3,19 @@
 
 # include <iostream>
 # include <string>
-# include <cstlib>
+# include <cstdlib>
 # include <limits>
 # include <iomanip>
 
 class   ScalarConverter
 {
-    private:
-        ScalarConverter();
-        ScalarConverter(const ScalarConverter& other);
-        ~ScalarConverter();
-        ScalarConverter& operator=(const ScalarConverter& other);
-    public:
-        static void convert(std::string& literal);
+	private:
+		ScalarConverter();
+		ScalarConverter(const ScalarConverter& other);
+		~ScalarConverter();
+		ScalarConverter& operator=(const ScalarConverter& other);
+	public:
+		static void convert(const std::string& literal);
 };
 
 #endif

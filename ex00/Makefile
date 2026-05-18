@@ -1,10 +1,11 @@
-NAME = ScalarConverter
+NAME = convert
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -Iincludes
 
 SRCS =	srcs/main.cpp \
-		srcs/ScalarConverter.cpp
+				srcs/ScalarConverter.cpp \
+				srcs/convert.cpp
 
 OBJDIR = objs
 OBJS = $(patsubst srcs/%.cpp,$(OBJDIR)/%.o,$(SRCS))
